@@ -1,0 +1,25 @@
+---
+layout: default
+title: Projects
+description: Selected robotics, learning systems, and creative technology projects by Kevin Park.
+page_class: projects
+permalink: /projects/
+---
+
+<header class="page-hero reveal">
+  <p class="eyebrow">Projects</p>
+  <h1>Selected work, experiments, and systems.</h1>
+  <p>Each project should quickly explain the problem, your contribution, and the result. The entries below are ready for real copy, images, demos, and links.</p>
+</header>
+
+<section class="project-grid project-grid--archive reveal" aria-label="Project archive">
+  {% for project in site.data.projects %}
+    {% include project-card.html project=project %}
+  {% endfor %}
+</section>
+
+<aside class="editor-note reveal">
+  <p class="eyebrow">Portfolio rule</p>
+  <p>Three strong case studies will do more work than ten shallow cards. Lead with your role and evidence, then add the technical detail.</p>
+</aside>
+

@@ -1,0 +1,12 @@
+interests:
+  - title: Humanoid locomotion
+    description: Learning robust, expressive movement for high-dimensional robotic systems.
+  - title: Reinforcement learning
+    description: Designing policies, rewards, and training environments that transfer into useful behavior.
+  - title: Simulation to reality
+    description: Closing the gap between controlled experiments and systems that work in the physical world.
+
+# Add publications using the field guide in README.md. This empty list keeps
+# the page honest until real publication details are available.
+publications: []
+

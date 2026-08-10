@@ -1,0 +1,45 @@
+- slug: dwl-g1-humanoid-locomotion
+  title: DWL / G1 Humanoid Locomotion
+  kicker: Project 01 · Robotics
+  summary: >-
+    A learning-based humanoid locomotion project. Add the core problem, your
+    contribution, and one concrete result here.
+  tags:
+    - Humanoid
+    - Reinforcement Learning
+    - Simulation
+  featured: true
+  tone: cobalt
+  link:
+  year:
+
+- slug: dreamwaq
+  title: DreamWaQ
+  kicker: Project 02 · Learning Systems
+  summary: >-
+    A portfolio entry for DreamWaQ. Replace this with a concise description of
+    the research question, method, and outcome.
+  tags:
+    - Robotics
+    - Learning
+    - Control
+  featured: true
+  tone: tangerine
+  link:
+  year:
+
+- slug: music-content-project
+  title: Music Content Project
+  kicker: Project 03 · Creative Technology
+  summary: >-
+    A creative technology project. Add what you made, who it was for, and what
+    changed because of it.
+  tags:
+    - Creative Tech
+    - Content
+    - Product
+  featured: true
+  tone: violet
+  link:
+  year:
+

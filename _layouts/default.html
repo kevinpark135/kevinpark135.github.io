@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body id="top" class="page-{{ page.page_class | default: 'standard' }}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include mobile-header.html %}
+
+    <div class="site-shell">
+      {% include sidebar.html %}
+      <main class="site-main" id="main-content">
+        {{ content }}
+        {% include footer.html %}
+      </main>
+    </div>
+  </body>
+</html>
+

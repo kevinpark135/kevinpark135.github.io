@@ -1,0 +1,60 @@
+---
+layout: default
+title: Research
+description: Research interests and publications by Kevin Park.
+page_class: research
+permalink: /research/
+---
+
+<header class="page-hero reveal">
+  <p class="eyebrow">Research</p>
+  <h1>Questions I want to understand deeply.</h1>
+  <p>This page separates research output from broader project work, so papers, technical reports, and ongoing directions stay easy to scan.</p>
+</header>
+
+<section class="content-section reveal" aria-labelledby="research-interests-title">
+  <div class="section-heading section-heading--stacked">
+    <p class="eyebrow">Research interests</p>
+    <h2 id="research-interests-title">Areas of focus.</h2>
+  </div>
+  <div class="research-list">
+    {% for interest in site.data.research.interests %}
+      <article class="research-item">
+        <span class="research-item__index">0{{ forloop.index }}</span>
+        <div>
+          <h3>{{ interest.title }}</h3>
+          <p>{{ interest.description }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="content-section reveal" aria-labelledby="publications-title">
+  <div class="section-heading section-heading--stacked">
+    <p class="eyebrow">Publications</p>
+    <h2 id="publications-title">Papers &amp; writing.</h2>
+  </div>
+
+  {% if site.data.research.publications.size > 0 %}
+    <div class="publication-list">
+      {% for publication in site.data.research.publications %}
+        <article class="publication-item">
+          <p class="publication-item__meta">{{ publication.venue }} · {{ publication.year }}</p>
+          <h3>{{ publication.title }}</h3>
+          <p>{{ publication.authors }}</p>
+          <div class="publication-item__links">
+            {% if publication.paper %}<a href="{{ publication.paper }}">Paper ↗</a>{% endif %}
+            {% if publication.code %}<a href="{{ publication.code }}">Code ↗</a>{% endif %}
+            {% if publication.project %}<a href="{{ publication.project }}">Project ↗</a>{% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <span class="empty-state__mark" aria-hidden="true">+</span>
+      <p>Publications and technical writing will be listed here as they become available.</p>
+    </div>
+  {% endif %}
+</section>

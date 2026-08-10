@@ -1,0 +1,31 @@
+<aside class="site-rail" aria-label="Site information">
+  <a class="monogram" href="{{ '/' | relative_url }}" aria-label="{{ site.data.profile.name }} home">
+    <span>{{ site.data.profile.initials }}</span>
+  </a>
+
+  <div class="rail-identity">
+    <p class="rail-name">{{ site.data.profile.name }}</p>
+    <p class="rail-role">{{ site.data.profile.role }}</p>
+  </div>
+
+  {% include navigation.html %}
+
+  <div class="rail-links" aria-label="External links">
+    {% if site.data.profile.github %}
+      <a href="{{ site.data.profile.github }}" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    {% endif %}
+    {% if site.data.profile.linkedin %}
+      <a href="{{ site.data.profile.linkedin }}" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+    {% endif %}
+    {% if site.data.profile.scholar %}
+      <a href="{{ site.data.profile.scholar }}" target="_blank" rel="noreferrer">Scholar <span aria-hidden="true">↗</span></a>
+    {% endif %}
+    {% if site.data.profile.email %}
+      <a href="mailto:{{ site.data.profile.email }}">Email <span aria-hidden="true">↗</span></a>
+    {% endif %}
+    {% if site.data.profile.cv %}
+      <a href="{{ site.data.profile.cv | relative_url }}">CV <span aria-hidden="true">↓</span></a>
+    {% endif %}
+  </div>
+</aside>
+

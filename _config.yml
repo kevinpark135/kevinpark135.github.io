@@ -1,0 +1,15 @@
+title: Kevin Park
+description: Kevin Park's portfolio — robotics, learning systems, and creative technology.
+url: "https://kevinpark135.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Seoul
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+

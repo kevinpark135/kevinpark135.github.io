@@ -1,18 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Kevin Park</title>
-</head>
-<body>
-  <h1>Hello, I'm Kevin Park</h1>
-  <p>This is my personal website.</p>
+---
+layout: default
+title: Home
+description: Kevin Park's portfolio — selected work in robotics, learning systems, and creative technology.
+page_class: home
+permalink: /
+---
 
-  <h2>Projects</h2>
-  <ul>
-    <li>DWL / G1 Humanoid Locomotion</li>
-    <li>DreamWaQ</li>
-    <li>Music Content Project</li>
-  </ul>
-</body>
-</html>
+<section class="hero reveal">
+  <div class="hero__copy">
+    <p class="eyebrow">Kevin Park · Portfolio</p>
+    <h1>{{ site.data.profile.headline }}</h1>
+    <p class="hero__intro">{{ site.data.profile.intro }}</p>
+    <div class="hero__actions">
+      <a class="button button--primary" href="{{ '/projects/' | relative_url }}">Explore projects <span aria-hidden="true">↗</span></a>
+      <a class="button button--quiet" href="{{ '/about/' | relative_url }}">More about me</a>
+    </div>
+  </div>
+
+  <div class="hero__mark" aria-hidden="true">
+    <span class="hero__mark-label">KEVIN<br>PARK</span>
+    <span class="hero__mark-orbit"></span>
+    <span class="hero__mark-dot"></span>
+  </div>
+</section>
+<section class="content-section reveal" aria-labelledby="selected-work-title">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Selected work</p>
+      <h2 id="selected-work-title">A few things I’m building.</h2>
+    </div>
+    <a class="text-link" href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+      {% if project.featured %}
+        {% include project-card.html project=project %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="content-section reveal" aria-labelledby="themes-title">
+  <div class="section-heading section-heading--stacked">
+    <p class="eyebrow">Current themes</p>
+    <h2 id="themes-title">What I’m exploring.</h2>
+  </div>
+  <div class="theme-grid">
+    {% for interest in site.data.research.interests %}
+      <article class="theme-item">
+        <span class="theme-item__number">0{{ forloop.index }}</span>
+        <h3>{{ interest.title }}</h3>
+        <p>{{ interest.description }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="contact-panel reveal" aria-labelledby="contact-title">
+  <p class="eyebrow">Let’s connect</p>
+  <h2 id="contact-title">Have a project, question, or idea?</h2>
+  <p>The best links to reach me and follow the work are collected here.</p>
+  <div class="contact-panel__links">
+    <a class="button button--inverse" href="{{ site.data.profile.github }}" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    {% if site.data.profile.email %}
+      <a class="button button--outline-light" href="mailto:{{ site.data.profile.email }}">Email me</a>
+    {% endif %}
+  </div>
+</section>
